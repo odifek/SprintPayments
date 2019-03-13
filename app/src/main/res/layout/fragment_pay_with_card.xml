@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintlayout_payWithCard"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".PayWithCardFragment">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textinputlayout_pay_card_number"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="64dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginRight="16dp"
+            app:helperText="@string/helper_text_card_number"
+            app:helperTextTextAppearance="@style/TextAppearance.SprintPay.Colored"
+            app:hintEnabled="false"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/textinputedittext_pay_card_number"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/placeholder_card_num"
+                android:inputType="number" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textinputlayout_pay_card_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginRight="16dp"
+            app:helperText="@string/helper_text_name_on_card"
+            app:helperTextEnabled="true"
+            app:helperTextTextAppearance="@style/TextAppearance.SprintPay.Colored"
+            app:hintEnabled="false"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textinputlayout_pay_card_number">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/textinputedittext_pay_card_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName"
+                android:hint="@string/placeholder_name_on_card" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textinputlayout_pay_expiry"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            app:helperTextTextAppearance="@style/TextAppearance.SprintPay.Colored"
+            app:helperText="@string/helper_text_expiry"
+            app:layout_constraintEnd_toStartOf="@+id/textinputlayout_pay_cvv"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintHorizontal_chainStyle="spread_inside"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textinputlayout_pay_card_name">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/textinputedittext_pay_expiry"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="date"
+                android:hint="@string/placeholder_date" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textinputlayout_pay_cvv"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginRight="16dp"
+            app:helperText="@string/helper_text_cvv"
+            app:helperTextTextAppearance="@style/TextAppearance.SprintPay.Colored"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/textinputlayout_pay_expiry"
+            app:layout_constraintTop_toTopOf="@+id/textinputlayout_pay_expiry">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/textinputedittext_pay_cvv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="numberPassword"
+                android:hint="@string/placeholder_cvv" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Button
+            android:id="@+id/button_pay_checkout"
+            android:layout_width="184dp"
+            android:layout_height="48dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="64dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:text="@string/label_checkout"
+            app:cornerRadius="24dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textinputlayout_pay_expiry" />
+
+        <Button
+            android:id="@+id/button_pay_cancel"
+            style="@style/Widget.MaterialComponents.Button.TextButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/label_cancel"
+            android:textColor="#55212121"
+            app:cornerRadius="24dp"
+            app:layout_constraintEnd_toEndOf="@+id/button_pay_checkout"
+            app:layout_constraintStart_toStartOf="@+id/button_pay_checkout"
+            app:layout_constraintTop_toBottomOf="@+id/button_pay_checkout" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

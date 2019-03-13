@@ -1,3 +1,13 @@
 <resources>
     <string name="app_name">Sprint Payments</string>
+    <string name="placeholder_card_num">XXXX-XXXX-XXXX-XXXX</string>
+    <string name="placeholder_name_on_card">John Doe</string>
+    <string name="placeholder_cvv">XXX</string>
+    <string name="helper_text_expiry">Expiry</string>
+    <string name="helper_text_cvv">CVV</string>
+    <string name="helper_text_name_on_card">Name on Card</string>
+    <string name="placeholder_date">12/22</string>
+    <string name="helper_text_card_number">Card Number</string>
+    <string name="label_checkout">Checkout</string>
+    <string name="label_cancel">Cancel</string>
 </resources>
